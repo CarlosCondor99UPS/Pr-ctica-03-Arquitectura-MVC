@@ -24,13 +24,13 @@ public abstract class Vertebrado extends Animal {
     }
 
     //Constructor de herencia con la clase Abuelo Animal
-    public Vertebrado(int codigo,String nombre, int edad, int peso, String tipoAlimentacion) {
+    public Vertebrado(int codigo, String nombre, int edad, int peso, String tipoAlimentacion) {
         super(codigo, nombre, edad, peso, tipoAlimentacion);
     }
 
     //Constructor de herencia y con los atributos de la clase Padre Vertebrado
     public Vertebrado(int numeroHuesos, String esqueleto, String sangre, String tejido, int codigo, String nombre, int edad, int peso, String tipoAlimentacion) {
-        super(codigo,nombre, edad, peso, tipoAlimentacion);
+        super(codigo, nombre, edad, peso, tipoAlimentacion);
         this.numeroHuesos = numeroHuesos;
         this.esqueleto = esqueleto;
         this.sangre = sangre;
