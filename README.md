@@ -23,6 +23,7 @@ Usuario: CarlosCondor99UPS
 
 Link: https://github.com/CarlosCondor99UPS/Pr-ctica-03-Arquitectura-MVC 
 
+http://prntscr.com/ngt2fj
 
 
 2. Sincronizar el repositorio creado con un proyecto en NetBeans. Realizar varios commit y push por cada requerimiento de los puntos a continuación descritos (incluir un mensaje que identifique claramente los commits realizados a GitHub). 
