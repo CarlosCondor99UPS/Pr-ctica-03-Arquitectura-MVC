@@ -49,7 +49,7 @@ public class ControladorAve {
 
     public void listar(){
         for(Ave ave : aves){
-            System.out.println(ave.toString());
+            System.out.println(ave.getNombre());
         }
     }
 

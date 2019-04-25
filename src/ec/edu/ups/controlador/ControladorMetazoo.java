@@ -56,7 +56,7 @@ public class ControladorMetazoo {
 
     public void listar() {
         for (Metazoo objeto : this.metazoos) {
-            System.out.println(objeto.toString());
+            System.out.println(objeto.getNombre());
         }
     }
 }

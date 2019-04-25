@@ -45,11 +45,9 @@ public class ControladorPez {
     }
 
     public void listar() {
-        System.out.println(this.peces.size());
-
         for (int i = 0; i < this.peces.size(); i++) {
             Pez objeto = this.peces.get(i + 1);
-            System.out.println(objeto.toString());
+            System.out.println(objeto.getNombre());
         }
     }
 
