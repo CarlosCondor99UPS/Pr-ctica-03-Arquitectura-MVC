@@ -35,34 +35,41 @@ Link: https://github.com/CarlosCondor99UPS/Pr-ctica-03-Arquitectura-MVC
 
 3. Crear un paquete para los controladores y un paquete para la vista. 
 
+![image](https://user-images.githubusercontent.com/49033386/56748626-cced0300-6745-11e9-953e-5412613e2f7e.png)
 
-![image](https://user-images.githubusercontent.com/49033386/56748449-7f709600-6745-11e9-9b88-c1bcc1a67404.png)
+
 
 
 4. Crear un controlador por cada clase hija. En total, cuatro controladores. 
+![image](https://user-images.githubusercontent.com/49033386/56748449-7f709600-6745-11e9-9b88-c1bcc1a67404.png)
 
- ![image](https://user-images.githubusercontent.com/49033386/56748469-88f9fe00-6745-11e9-9145-811008520945.png)
+ 
 
-5. Al menos una clase Controlador debe ser implementada usando la interface List y la clase ArrayList. 
+5. Al menos una clase Controlador debe ser implementada usando la interface List y la clase ArrayList.
+![image](https://user-images.githubusercontent.com/49033386/56748469-88f9fe00-6745-11e9-9145-811008520945.png)
 
- ![image](https://user-images.githubusercontent.com/49033386/56748484-8f887580-6745-11e9-85df-f8cc5a3ae63e.png)
+ 
+ 
 
 
 6. Al menos una clase Controlador debe ser implementada usando la interface Set y la clase HashSet. 
+![image](https://user-images.githubusercontent.com/49033386/56748484-8f887580-6745-11e9-85df-f8cc5a3ae63e.png)
 
- ![image](https://user-images.githubusercontent.com/49033386/56748521-9fa05500-6745-11e9-8586-54401f9d9fb0.png)
+
 
 7. Al menos una clase Controlador debe ser implementada usando la interface SortedSet y la clase TreeSet. 
-![image](https://user-images.githubusercontent.com/49033386/56748529-a4650900-6745-11e9-9d1e-e443718c5976.png)
- 
+ ![image](https://user-images.githubusercontent.com/49033386/56748521-9fa05500-6745-11e9-8586-54401f9d9fb0.png)
+
 
 8. Al menos una clase Controlador debe ser implementada usando la interface Map y la clase HashMap o la interface Map y la clase TreeMap. 
-
+![image](https://user-images.githubusercontent.com/49033386/56748529-a4650900-6745-11e9-9d1e-e443718c5976.png)
+ 
  
 
 9. Crear una clase “Principal”, en donde se demostrará el funcionamiento del sistema completo a través de la consola de java, usando menús y submenús para acceder a las opciones. Por ejemplo: 
 
  
+![image](https://user-images.githubusercontent.com/49033386/56748669-dfffd300-6745-11e9-87b7-47088b31466a.png)
 
  
 
@@ -76,7 +83,8 @@ Link: https://github.com/CarlosCondor99UPS/Pr-ctica-03-Arquitectura-MVC
 
 11. Desarrollar el diagrama de clases correspondiente usando la herramienta LucidChart. Se debe agregar las clases controladores y la clase “Principal”. 
 
- 
+ ![Diagrama en blanco (1)](https://user-images.githubusercontent.com/49033386/56748701-ed1cc200-6745-11e9-8fd2-9480d92614e4.jpeg)
+
 
  
 
