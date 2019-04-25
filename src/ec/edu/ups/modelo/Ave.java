@@ -5,14 +5,13 @@
  */
 package ec.edu.ups.modelo;
 
-
 /**
  *
  * @author tians
  * @version 8.2
  * @since 2019
  */
-public final class Ave extends Vertebrado{
+public final class Ave extends Vertebrado {
 
     //Clase hija Ave que contiene los atributos finales
     private int numeroAlas;
@@ -25,12 +24,12 @@ public final class Ave extends Vertebrado{
     }
 
     //Constructor de herencia con la clase Abuelo Animal
-    public Ave(int numeroHuesos, String esqueleto, String sangre, String tejido,int codigo ,String nombre, int edad, int peso, String tipoAlimentacion) {
-        super(numeroHuesos, esqueleto, sangre, tejido,codigo ,nombre, edad, peso, tipoAlimentacion);
+    public Ave(int numeroHuesos, String esqueleto, String sangre, String tejido, int codigo, String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(numeroHuesos, esqueleto, sangre, tejido, codigo, nombre, edad, peso, tipoAlimentacion);
     }
 
     //Constructor de herencia con la clase Abuelo Animal y atributos de la clase Ave
-    public Ave(int numeroAlas, boolean volador, String formaPico, int campoVision,int codigo ,String nombre, int edad, int peso, String tipoAlimentacion) {
+    public Ave(int numeroAlas, boolean volador, String formaPico, int campoVision, int codigo, String nombre, int edad, int peso, String tipoAlimentacion) {
         super(codigo, nombre, edad, peso, tipoAlimentacion);
         this.numeroAlas = numeroAlas;
         this.volador = volador;
@@ -39,8 +38,8 @@ public final class Ave extends Vertebrado{
     }
 
     //Constructor de herencia con la clase padre Vertebrados y atributos de la clase Ave
-    public Ave(int numeroAlas, boolean volador, String formaPico, int campoVision, int numeroHuesos, String esqueleto ,String sangre, String tejido,int codigo  ,String nombre, int edad, int peso, String tipoAlimentacion) {
-        super(numeroHuesos, esqueleto, sangre, tejido,codigo ,nombre, edad, peso, tipoAlimentacion);
+    public Ave(int numeroAlas, boolean volador, String formaPico, int campoVision, int numeroHuesos, String esqueleto, String sangre, String tejido, int codigo, String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(numeroHuesos, esqueleto, sangre, tejido, codigo, nombre, edad, peso, tipoAlimentacion);
         this.numeroAlas = numeroAlas;
         this.volador = volador;
         this.formaPico = formaPico;
@@ -83,7 +82,7 @@ public final class Ave extends Vertebrado{
     //Metodo toString de la clase Ave
     @Override
     public String toString() {
-        return "Animal: " + "\n\tNombre: " + super.getNombre() +"\n\tCodigo: " + super.getCodigo() + "\n\tEdad: " + super.getEdad() + "\n\tPeso: " + super.getPeso() + "\n\tAlimentacion: " + super.getTipoAlimentacion() + "\n\n"
+        return "Animal: " + "\n\tNombre: " + super.getNombre() + "\n\tCodigo: " + super.getCodigo() + "\n\tEdad: " + super.getEdad() + "\n\tPeso: " + super.getPeso() + "\n\tAlimentacion: " + super.getTipoAlimentacion() + "\n\n"
                 + "\tVertebrado: " + "\n\t\t\tEsqueleto: " + super.getEsqueleto() + "\n\t\t\tSangre: " + super.getSangre() + "\n\t\t\tTejido: " + super.getTejido() + "\n\t\t\tHuesos: " + super.getNumeroHuesos() + "\n\n"
                 + "\t\t\tAve:" + "\n\t\t\t\tAlas: " + numeroAlas + "\n\t\t\t\tVolador: " + volador + "\n\t\t\t\tForma Pico: " + formaPico + "\n\t\t\t\tCampo Vision(grados): " + campoVision + "\n\n";
 

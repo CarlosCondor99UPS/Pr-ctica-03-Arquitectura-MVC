@@ -25,21 +25,20 @@ public class Animal {
     }
 
     //Contructor con atributos de la clase Animal
-    public Animal(int codigo,String nombre, int edad, int peso, String tipoAlimentacion) {
-        this.codigo=codigo;
+    public Animal(int codigo, String nombre, int edad, int peso, String tipoAlimentacion) {
+        this.codigo = codigo;
         this.nombre = nombre;
         this.edad = edad;
         this.peso = peso;
         this.tipoAlimentacion = tipoAlimentacion;
     }
-    
+
     //Getter and Setter de la clase Animal
     public int getCodigo() {
         return codigo;
     }
 
-    
-    public void setCodigo(int codigo) {    
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
@@ -106,8 +105,4 @@ public class Animal {
         return true;
     }
 
-    
-    
-    
-    
 }

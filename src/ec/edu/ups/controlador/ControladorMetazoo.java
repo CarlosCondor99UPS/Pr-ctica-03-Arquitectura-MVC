@@ -16,13 +16,17 @@ import java.util.Set;
 public class ControladorMetazoo {
 
     private Set<Metazoo> metazoos = new HashSet<>();
+    private int cont;
 
-    public void ControladorPez() {
+    public void ControladorMetazoo() {
         metazoos = new HashSet<>();
+        cont = 0;
     }
 
-    public void guardar(Metazoo ojeto) {
-        metazoos.add(ojeto);
+    public void guardar(Metazoo objeto) {
+        cont++;
+        objeto.setCodigo(cont);
+        metazoos.add(objeto);
     }
 
     public Metazoo read(int codigo) {
@@ -47,6 +51,12 @@ public class ControladorMetazoo {
                 metazoos.remove(metazoo);
                 break;
             }
+        }
+    }
+
+    public void listar() {
+        for (Metazoo objeto : this.metazoos) {
+            System.out.println(objeto.toString());
         }
     }
 }

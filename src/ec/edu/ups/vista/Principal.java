@@ -19,17 +19,22 @@ import java.util.Scanner;
  *
  * @author tians
  */
-public class main {
+public class Principal {
 
+    //Instancia de scanner para lectura de datos
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
+        //Instancia de controladores
         ControladorPez controladorPez = new ControladorPez();
         ControladorAve controladorAve = new ControladorAve();
         ControladorArtropodo controladorArtro = new ControladorArtropodo();
         ControladorMetazoo controladorMetazoo = new ControladorMetazoo();
+        //Creacion de variables para las opciones del menu y submenu
         int op = 0, op2 = 0, op3 = 0, op4 = 0, op5 = 0;
+        //Inicio del menu
         do {
+            //Salida del menu
             System.out.println("******* MENU ********");
             System.out.println("** 1. CRUD clase Pez");
             System.out.println("** 2. CRUD clase Ave");
@@ -37,23 +42,31 @@ public class main {
             System.out.println("** 4. CRUD clase Metazoo");
             System.out.println("** 5. Salir");
             System.out.println("*********************");
+            //lectura de la opcion
             op = sc.nextInt();
-
+            //Inicio de la comparacion de la opcion de CRUD
             if (op == 1) {
                 do {
+                    //Salida del submenu
                     System.out.println("****** CRUD PEZ *******");
                     mostrarCrud();
+                    //Lectura de la opcion
                     op2 = sc.nextInt();
+                    //Inicio del switch para comparar el submenu
                     switch (op2) {
                         case 1:
+                            //CRUD PEZ
                             System.out.println("*** Crear Pez ***");
+                            //Extracion de datos de la clase animal
                             String[] animal1 = new String[2];
                             animal1 = crearAnimal1();
                             int[] animal2 = new int[3];
                             animal2 = crearAnimal2();
+                            //Extracion de datos de la clase vertebrado
                             int numeroHuesos = crearVertebrado1();
                             String[] vertebrado = new String[3];
                             vertebrado = crearVertebrado2();
+                            //Lectura de datos de atributos unicos del pez
                             System.out.println("** Ingrese el agua");
                             String agua = sc.next();
                             System.out.println("** Ingrese la aleta(true/false)");
@@ -62,24 +75,32 @@ public class main {
                             boolean mandibula = sc.nextBoolean();
                             System.out.println("** Ingrese el camuflaje(true/false)");
                             boolean camuflaje = sc.nextBoolean();
+                            //Creacion del objeto Pez a guardar
                             Pez objeto = new Pez(agua, aleta, mandibula, camuflaje, numeroHuesos, vertebrado[0], vertebrado[1], vertebrado[2], 0, animal1[0], animal2[1], animal2[2], animal1[1]);
+                            //Utilizacion del controlador Pez
                             controladorPez.guardar(objeto);
                             break;
                         case 2:
+
                             System.out.println("*** Leer Pez ***");
                             System.out.println("** Ingrese el codigo del pez");
+                            //Lectura del codigo del pez
                             int codigo = sc.nextInt();
+                            //Salida de la informacion del pez desde el controlador
                             System.out.println(controladorPez.read(codigo));
                             break;
                         case 3:
                             System.out.println("*** Actualizar Pez ***");
+                            //Extracion de datos de la clase animal
                             animal1 = new String[2];
                             animal1 = crearAnimal1();
                             animal2 = new int[3];
                             animal2 = crearAnimal2();
+                            //Extracion de datos de la clase vertebrado
                             numeroHuesos = crearVertebrado1();
                             vertebrado = new String[3];
                             vertebrado = crearVertebrado2();
+                            //Extracion de datos unicos de la clase pez
                             System.out.println("** Ingrese el agua");
                             agua = sc.next();
                             System.out.println("** Ingrese la aleta(true/false)");
@@ -88,20 +109,26 @@ public class main {
                             mandibula = sc.nextBoolean();
                             System.out.println("** Ingrese el camuflaje(true/false)");
                             camuflaje = sc.nextBoolean();
+                            //Creacion del objeto Pez a guardar
                             Pez objetoNuevo = new Pez(agua, aleta, mandibula, camuflaje, numeroHuesos, vertebrado[0], vertebrado[1], vertebrado[2], 0, animal1[0], animal2[1], animal2[2], animal1[1]);
+                            //Utilizacion del controlador Pez
                             controladorPez.update(objetoNuevo);
                             break;
                         case 4:
                             System.out.println("*** Eliminar Pez ***");
                             System.out.println("** Ingrese el codigo");
+                            //Lectura del codigo del pez a eleminar 
                             codigo = sc.nextInt();
+                            //Utilizacion del controlador Pez
                             controladorPez.delete(controladorPez.read(codigo));
                             break;
                         case 5:
+                            //Listado 
                             System.out.println("*** Listar Pez ***");
+                            //Utilizacion del controlador Pez
                             controladorPez.listar();
                             break;
-                            
+
                     }
                 } while (op2 != 5);
             } else if (op == 2) {
@@ -297,6 +324,7 @@ public class main {
         } while (op != 5);
     }
 
+    //Metodo que muestra el CRUD
     public static void mostrarCrud() {
         System.out.println("** 1. Crear (Create)");
         System.out.println("** 2. Leer (Read)");
@@ -307,6 +335,7 @@ public class main {
         System.out.println("************************");
     }
 
+    //Metodo que devuelve los valores de la clase animal donde se piden 
     public static String[] crearAnimal1() {
         String[] animal = new String[2];
         System.out.println("** Ingrese el nombre");
@@ -316,6 +345,7 @@ public class main {
         return animal;
     }
 
+    //Metodo que devuelve los valores de la clase animal donde se piden 
     public static int[] crearAnimal2() {
         int[] animal = new int[3];
         System.out.println("** Ingrese la edad");
@@ -325,12 +355,14 @@ public class main {
         return animal;
     }
 
+    //Metodo que devuelve los valores de la clase vertebrado donde se piden 
     public static int crearVertebrado1() {
         System.out.println("** Ingrese el numero de huesos");
         int numeroHuesos = sc.nextInt();
         return numeroHuesos;
     }
 
+    //Metodo que devuelve los valores de la clase vertebrado donde se piden 
     public static String[] crearVertebrado2() {
         String[] vertebrado = new String[3];
         System.out.println("** Ingrese el esqueleto");
@@ -341,6 +373,7 @@ public class main {
         vertebrado[2] = sc.next();
         return vertebrado;
     }
+    //Metodo que devuelve los valores de la clase invertebrado donde se piden 
 
     static public boolean[] crearInvertebrado() {
         boolean[] invertebrado = new boolean[4];

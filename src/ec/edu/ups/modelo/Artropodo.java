@@ -5,7 +5,6 @@
  */
 package ec.edu.ups.modelo;
 
-
 /**
  *
  * @author tians
@@ -13,6 +12,7 @@ package ec.edu.ups.modelo;
  * @since 2019
  */
 public final class Artropodo extends Invertebrado {
+
     //Clase hija Artropodo que contiene los atributos finales
     private String forma;
     private boolean apendice;
@@ -27,15 +27,15 @@ public final class Artropodo extends Invertebrado {
     public Artropodo(int codigo, String nombre, int edad, int peso, String tipoAlimentacion) {
         super(codigo, nombre, edad, peso, tipoAlimentacion);
     }
-    
+
     //Constructor de herencia con la clase Padre Invertebrados
-    public Artropodo(boolean proteccionCorporal, boolean excepcion, boolean movilidad, boolean venenoso,int codigo, String nombre, int edad, int peso, String tipoAlimentacion) {
-        super(proteccionCorporal, excepcion, movilidad, venenoso,codigo ,nombre, edad, peso, tipoAlimentacion);
+    public Artropodo(boolean proteccionCorporal, boolean excepcion, boolean movilidad, boolean venenoso, int codigo, String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(proteccionCorporal, excepcion, movilidad, venenoso, codigo, nombre, edad, peso, tipoAlimentacion);
     }
 
     //Constructor de herencia con la clase Padre Inverberados y con los atributos de la clase Hija Artropodo
-    public Artropodo(String forma, boolean apendice, boolean cabeza, boolean poro, boolean proteccionCorporal, boolean excepcion, boolean movilidad, boolean venenoso,int codigo ,String nombre, int edad, int peso, String tipoAlimentacion) {
-        super(proteccionCorporal, excepcion, movilidad, venenoso,codigo ,nombre, edad, peso, tipoAlimentacion);
+    public Artropodo(String forma, boolean apendice, boolean cabeza, boolean poro, boolean proteccionCorporal, boolean excepcion, boolean movilidad, boolean venenoso, int codigo, String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(proteccionCorporal, excepcion, movilidad, venenoso, codigo, nombre, edad, peso, tipoAlimentacion);
         this.forma = forma;
         this.apendice = apendice;
         this.cabeza = cabeza;

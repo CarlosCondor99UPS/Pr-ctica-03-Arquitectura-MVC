@@ -2,23 +2,21 @@
 package ec.edu.ups.controlador;
 
 import ec.edu.ups.modelo.Ave;
-import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
 public class ControladorAve {
 
-    private SortedSet<Ave> aves;
-    private int codigo;
+    private SortedSet<Ave> aves=new TreeSet<>();
+    private int cont;
 
     public ControladorAve() {
-        aves = new TreeSet<>();
-        codigo = 0;
+        cont = 0;
     }
-
+    
     public void guardar(Ave objeto){
-        codigo ++;
-        objeto.setCodigo(codigo);
+        cont ++;
+        objeto.setCodigo(cont);
         aves.add(objeto);
     }
     
@@ -45,6 +43,12 @@ public class ControladorAve {
             break;
             }
             
+        }
+    }
+    
+    public void listar (){
+        for (Ave objeto : this.aves){
+            System.out.println(objeto.toString());
         }
     }
 
