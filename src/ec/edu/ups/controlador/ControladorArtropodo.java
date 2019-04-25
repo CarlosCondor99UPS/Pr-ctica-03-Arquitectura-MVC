@@ -51,7 +51,7 @@ public class ControladorArtropodo {
 
     public void listar() {
         for (Artropodo objeto : this.artropodos) {
-            System.out.println(objeto.toString());
+            System.out.println(objeto.getNombre());
         }
     }
 }

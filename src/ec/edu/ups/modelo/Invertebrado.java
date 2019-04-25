@@ -24,12 +24,12 @@ public abstract class Invertebrado extends Animal {
     }
 
     //Constructor de herencia con la clase Abuelo Animal
-    public Invertebrado(int codigo,String nombre, int edad, int peso, String tipoAlimentacion) {
-        super(codigo,nombre, edad, peso, tipoAlimentacion);
+    public Invertebrado(int codigo, String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(codigo, nombre, edad, peso, tipoAlimentacion);
     }
 
     //Constructor de herencia y con los atributos de la clase Padre Invertebrado
-    public Invertebrado(boolean proteccionCorporal, boolean excepcion, boolean movilidad, boolean venenoso,int codigo ,String nombre, int edad, int peso, String tipoAlimentacion) {
+    public Invertebrado(boolean proteccionCorporal, boolean excepcion, boolean movilidad, boolean venenoso, int codigo, String nombre, int edad, int peso, String tipoAlimentacion) {
         super(codigo, nombre, edad, peso, tipoAlimentacion);
         this.proteccionCorporal = proteccionCorporal;
         this.excepcion = excepcion;

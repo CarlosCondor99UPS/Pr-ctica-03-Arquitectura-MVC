@@ -5,14 +5,13 @@
  */
 package ec.edu.ups.modelo;
 
-
 /**
  *
  * @author tians
  * @version 8.2
  * @since 2019
  */
-public final class Metazoo extends Invertebrado{
+public final class Metazoo extends Invertebrado {
 
     //Clase hija Metazoo que contiene los atributos finales
     private boolean cuerpoBlando;
@@ -25,13 +24,13 @@ public final class Metazoo extends Invertebrado{
     }
 
     //Constructor de herencia con la clase Padre Invertebrados
-    public Metazoo(int codigo,String nombre, int edad, int peso, String tipoAlimentacion) {
+    public Metazoo(int codigo, String nombre, int edad, int peso, String tipoAlimentacion) {
         super(codigo, nombre, edad, peso, tipoAlimentacion);
     }
 
     //Constructor de herencia y con los atributos de la clase Metazoo
-    public Metazoo(boolean cuerpoBlando, String simetria, String piel, boolean antenas, boolean proteccionCorporal, boolean excepcion, boolean movilidad, boolean venenoso,int codigo ,String nombre, int edad, int peso, String tipoAlimentacion) {
-        super(proteccionCorporal, excepcion, movilidad, venenoso,codigo ,nombre, edad, peso, tipoAlimentacion);
+    public Metazoo(boolean cuerpoBlando, String simetria, String piel, boolean antenas, boolean proteccionCorporal, boolean excepcion, boolean movilidad, boolean venenoso, int codigo, String nombre, int edad, int peso, String tipoAlimentacion) {
+        super(proteccionCorporal, excepcion, movilidad, venenoso, codigo, nombre, edad, peso, tipoAlimentacion);
         this.cuerpoBlando = cuerpoBlando;
         this.simetria = simetria;
         this.piel = piel;
@@ -74,7 +73,7 @@ public final class Metazoo extends Invertebrado{
     //Metodo toString de la clase Metazoo
     @Override
     public String toString() {
-        return "Animal: " + "\n\tNombre: " + super.getNombre() +"\n\tCodigo: " + super.getCodigo() + "\n\tEdad: " + super.getEdad() + "\n\tPeso: " + super.getPeso() + "\n\tAlimentacion: " + super.getTipoAlimentacion() + "\n\n"
+        return "Animal: " + "\n\tNombre: " + super.getNombre() + "\n\tCodigo: " + super.getCodigo() + "\n\tEdad: " + super.getEdad() + "\n\tPeso: " + super.getPeso() + "\n\tAlimentacion: " + super.getTipoAlimentacion() + "\n\n"
                 + "\tInvertebrado: " + "\n\t\t\tExcepcion: " + super.isExcepcion() + "\n\t\t\tMovilidad: " + super.isMovilidad() + "\n\t\t\tProteccion Corporal: " + super.isProteccionCorporal() + "\n\t\t\tVenenoso: " + super.isVenenoso() + "\n\n"
                 + "\t\t\tMetazoo:" + "\n\t\t\t\t\tCuerpo Blando: " + cuerpoBlando + "\n\t\t\t\t\tSimetrai: " + simetria + "\n\t\t\t\t\tPiel: " + piel + "\n\t\t\t\t\tAntenas: " + antenas + "\n\n";
     }
