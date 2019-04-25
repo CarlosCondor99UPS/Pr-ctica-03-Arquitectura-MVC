@@ -8,24 +8,22 @@ import java.util.TreeSet;
 
 public class ControladorAve {
 
-    private SortedSet<Ave> listaOrdenada;
+    private SortedSet<Ave> aves;
     private int codigo;
 
     public ControladorAve() {
-    
-        listaOrdenada = new TreeSet<>();
-        codigo = 1;
-    
+        aves = new TreeSet<>();
+        codigo = 0;
     }
 
     public void guardar(Ave objeto){
         codigo ++;
         objeto.setCodigo(codigo);
-        listaOrdenada.add(objeto);
+        aves.add(objeto);
     }
     
     public Ave read(int codigo){
-        for (Ave Ave : listaOrdenada) {
+        for (Ave Ave : aves) {
             if(Ave.getCodigo() == codigo){
                 return Ave;
             }
@@ -34,28 +32,21 @@ public class ControladorAve {
     }
     
     public void update(Ave objeto){
-        if(listaOrdenada.contains(objeto)){
-            listaOrdenada.remove(objeto);
-            listaOrdenada.add(objeto);
+        if(aves.contains(objeto)){
+            aves.remove(objeto);
+            aves.add(objeto);
         }
     }
     
     public void delete(int codigo){
-        for (Ave Ave : listaOrdenada) {
-            if(Ave.getCodigo() == codigo){
-                listaOrdenada.remove(Ave);
+        for (Ave ave : aves) {
+            if(ave.getCodigo() == codigo){
+                aves.remove(ave);
             break;
             }
             
         }
     }
 
-    public void imprimir(){
-        System.out.println("Lista Ordenada por Nombre");
-        for (Ave Ave : listaOrdenada) {
-            System.out.println(Ave.getNombre());
-            
-        }
-    }
     
 }
